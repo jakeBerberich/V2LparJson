@@ -30,11 +30,9 @@ class LparSubfileVC: UITableViewController {
             let lparList = try JSONDecoder().decode([Lpars].self, from: data)
             
             for systems in lparArray {
-                print(systems.lparName1)
+              print(lparArray)
                 lparArray = lparList
-                print(lparArray[0].lparDescription)
             }
-            
         }
         catch{ print("error")
         }
@@ -74,16 +72,60 @@ class LparSubfileVC: UITableViewController {
         
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-
+         let lparEntity = self.lparArray[indexPath.row]
+        
+// ---------  set up cell
+                switch sortValue {
+                case "lpar":
+                    cell.textLabel?.text = "\(lparEntity.lparName1) : \(lparEntity.application)"
+                    cell .detailTextLabel?.text = ("HMC:  \(lparEntity.hmc)  Server: \(lparEntity.server)   Partition: \(lparEntity.partitionID)")
+                case "hmc":
+                    cell.textLabel?.text = "\(lparEntity.lparName1) : \(lparEntity.hmc)"
+                    cell .detailTextLabel?.text =  " \(lparEntity.server) : \(lparEntity.application)"
+                case "application":
+                    cell.textLabel?.text = "\(lparEntity.lparName1) :  \(lparEntity.application)"
+                    cell .detailTextLabel?.text =  "\(lparEntity.hmc): \(lparEntity.server) "
+                case "environment":
+                    cell.textLabel?.text = "\(lparEntity.lparName1) : \(lparEntity.environment)"
+                    cell .detailTextLabel?.text =  "\(lparEntity.hmc): \(lparEntity.server) : \(lparEntity.application)"
+                case "server":
+                    cell.textLabel?.text = "\(lparEntity.lparName1) : \(lparEntity.server)"
+                    cell .detailTextLabel?.text =  "\(lparEntity.hmc): \(lparEntity.server) : \(lparEntity.application)"
+                default:
+                    cell.textLabel?.text = "\(lparEntity.lparName1), \(lparEntity.application)"
+                    cell .detailTextLabel?.text =  "\(lparEntity.hmc): \(lparEntity.server) : \(lparEntity.application)"
+        
+                }
+        
+        
         return cell
     }
-    */
+    
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailViewSegue" {
+            let detailTableVC = segue.destination as! DetailTableVC
+            let indexPath = self.tableView.indexPathForSelectedRow
+             detailTableVC.lparDetail = self.lparArray[indexPath!.row]
+        }
+        
+        
+    }
+    
+    @IBAction func goBack(_ sender: Any) {
+        dismiss(animated: true )
+    }
+    
+    
+    
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

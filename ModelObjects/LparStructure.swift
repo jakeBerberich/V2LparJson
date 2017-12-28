@@ -7,6 +7,7 @@
 //
 
 import Foundation
+var blanks = " "
 struct Lpars: Codable {
     let lparName1: String
     let lparDescription: String
@@ -55,4 +56,30 @@ struct Lpars: Codable {
         case comments = "COMMENTS"
         case pGroup = "PGROUP"
     }
+    init() {
+        lparName1 = blanks
+       lparDescription = blanks
+         hmc = blanks
+        server = blanks
+        serialNumber = blanks
+        systemType = 0
+        model = blanks
+        processorFeature = blanks
+        os400 = blanks
+        processors = 0
+        partitionID = 0
+        auxStorage = 0
+        systemAsp = 0
+        mainStorage = 0
+        totalPartitions = 0
+        application = blanks
+        environment = blanks
+        auditExternal = blanks
+        auditInternal = blanks
+        buildTime = blanks
+        comments = blanks
+        pGroup = blanks
+    }
+
+    
 }
