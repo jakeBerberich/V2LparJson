@@ -11,13 +11,19 @@ import UIKit
 class LparSubfileVC: UITableViewController {
     
     var lparArray = [Lpars]()
-    var sortValue: String = "setupValue"
+    var sortValue: String  = "Trx"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
         getJson()
+        print(sortValue)
         sortLpars()
     }
+    
+    
+    
     func getJson() {
         
         let path = Bundle.main.path(forResource: "lparImport", ofType: "json")
@@ -27,12 +33,8 @@ class LparSubfileVC: UITableViewController {
         do {
             let data = try Data(contentsOf: url)
             print(data)
-            let lparList = try JSONDecoder().decode([Lpars].self, from: data)
+           self.lparArray = try JSONDecoder().decode([Lpars].self, from: data)
             
-            for systems in lparArray {
-              print(lparArray)
-                lparArray = lparList
-            }
         }
         catch{ print("error")
         }
@@ -67,14 +69,14 @@ class LparSubfileVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+    
         return lparArray.count
         
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         // Configure the cell...
          let lparEntity = self.lparArray[indexPath.row]
