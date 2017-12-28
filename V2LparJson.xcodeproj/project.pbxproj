@@ -20,6 +20,7 @@
 		00164E181FF54010001F5661 /* ServerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00164E171FF54010001F5661 /* ServerVC.swift */; };
 		00164E1A1FF5434B001F5661 /* LparSubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00164E191FF5434A001F5661 /* LparSubfileVC.swift */; };
 		00164E1C1FF547CA001F5661 /* DetailTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00164E1B1FF547CA001F5661 /* DetailTableVC.swift */; };
+		00164E201FF568D4001F5661 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00164E1F1FF568D4001F5661 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		00164E171FF54010001F5661 /* ServerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerVC.swift; sourceTree = "<group>"; };
 		00164E191FF5434A001F5661 /* LparSubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LparSubfileVC.swift; sourceTree = "<group>"; };
 		00164E1B1FF547CA001F5661 /* DetailTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableVC.swift; sourceTree = "<group>"; };
+		00164E1F1FF568D4001F5661 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				00164E141FF53F2C001F5661 /* View Controllers */,
 				00164DFB1FF5372B001F5661 /* FirstViewController.swift */,
 				00164DFD1FF5372B001F5661 /* SecondViewController.swift */,
+				00164E1F1FF568D4001F5661 /* ThirdViewController.swift */,
 				00164E151FF53F8A001F5661 /* HmcVC.swift */,
 				00164E171FF54010001F5661 /* ServerVC.swift */,
 				00164E191FF5434A001F5661 /* LparSubfileVC.swift */,
@@ -179,6 +182,7 @@
 			files = (
 				00164E1A1FF5434B001F5661 /* LparSubfileVC.swift in Sources */,
 				00164E181FF54010001F5661 /* ServerVC.swift in Sources */,
+				00164E201FF568D4001F5661 /* ThirdViewController.swift in Sources */,
 				00164DFE1FF5372B001F5661 /* SecondViewController.swift in Sources */,
 				00164DFA1FF5372B001F5661 /* AppDelegate.swift in Sources */,
 				00164E111FF537C1001F5661 /* LparStructure.swift in Sources */,
