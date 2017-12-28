@@ -13,6 +13,12 @@
 		00164E011FF5372B001F5661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00164DFF1FF5372B001F5661 /* Main.storyboard */; };
 		00164E031FF5372B001F5661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00164E021FF5372B001F5661 /* Assets.xcassets */; };
 		00164E061FF5372B001F5661 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00164E041FF5372B001F5661 /* LaunchScreen.storyboard */; };
+		00164E0F1FF53798001F5661 /* lparImport.json in Resources */ = {isa = PBXBuildFile; fileRef = 00164E0E1FF53798001F5661 /* lparImport.json */; };
+		00164E111FF537C1001F5661 /* LparStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00164E101FF537C1001F5661 /* LparStructure.swift */; };
+		00164E131FF53E89001F5661 /* LparStaticVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00164E121FF53E89001F5661 /* LparStaticVariables.swift */; };
+		00164E161FF53F8A001F5661 /* HmcVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00164E151FF53F8A001F5661 /* HmcVC.swift */; };
+		00164E181FF54010001F5661 /* ServerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00164E171FF54010001F5661 /* ServerVC.swift */; };
+		00164E1A1FF5434B001F5661 /* LparSubfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00164E191FF5434A001F5661 /* LparSubfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		00164E021FF5372B001F5661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00164E051FF5372B001F5661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00164E071FF5372B001F5661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00164E0E1FF53798001F5661 /* lparImport.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lparImport.json; sourceTree = "<group>"; };
+		00164E101FF537C1001F5661 /* LparStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LparStructure.swift; sourceTree = "<group>"; };
+		00164E121FF53E89001F5661 /* LparStaticVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LparStaticVariables.swift; sourceTree = "<group>"; };
+		00164E151FF53F8A001F5661 /* HmcVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HmcVC.swift; sourceTree = "<group>"; };
+		00164E171FF54010001F5661 /* ServerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerVC.swift; sourceTree = "<group>"; };
+		00164E191FF5434A001F5661 /* LparSubfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LparSubfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +52,7 @@
 		00164DED1FF5372B001F5661 = {
 			isa = PBXGroup;
 			children = (
+				00164E0D1FF53778001F5661 /* ModelObjects */,
 				00164DF81FF5372B001F5661 /* V2LparJson */,
 				00164DF71FF5372B001F5661 /* Products */,
 			);
@@ -57,14 +70,35 @@
 			isa = PBXGroup;
 			children = (
 				00164DF91FF5372B001F5661 /* AppDelegate.swift */,
+				00164E141FF53F2C001F5661 /* View Controllers */,
 				00164DFB1FF5372B001F5661 /* FirstViewController.swift */,
 				00164DFD1FF5372B001F5661 /* SecondViewController.swift */,
+				00164E151FF53F8A001F5661 /* HmcVC.swift */,
+				00164E171FF54010001F5661 /* ServerVC.swift */,
+				00164E191FF5434A001F5661 /* LparSubfileVC.swift */,
 				00164DFF1FF5372B001F5661 /* Main.storyboard */,
 				00164E021FF5372B001F5661 /* Assets.xcassets */,
 				00164E041FF5372B001F5661 /* LaunchScreen.storyboard */,
 				00164E071FF5372B001F5661 /* Info.plist */,
 			);
 			path = V2LparJson;
+			sourceTree = "<group>";
+		};
+		00164E0D1FF53778001F5661 /* ModelObjects */ = {
+			isa = PBXGroup;
+			children = (
+				00164E0E1FF53798001F5661 /* lparImport.json */,
+				00164E101FF537C1001F5661 /* LparStructure.swift */,
+				00164E121FF53E89001F5661 /* LparStaticVariables.swift */,
+			);
+			path = ModelObjects;
+			sourceTree = "<group>";
+		};
+		00164E141FF53F2C001F5661 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00164E061FF5372B001F5661 /* LaunchScreen.storyboard in Resources */,
+				00164E0F1FF53798001F5661 /* lparImport.json in Resources */,
 				00164E031FF5372B001F5661 /* Assets.xcassets in Resources */,
 				00164E011FF5372B001F5661 /* Main.storyboard in Resources */,
 			);
@@ -139,9 +174,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00164E1A1FF5434B001F5661 /* LparSubfileVC.swift in Sources */,
+				00164E181FF54010001F5661 /* ServerVC.swift in Sources */,
 				00164DFE1FF5372B001F5661 /* SecondViewController.swift in Sources */,
 				00164DFA1FF5372B001F5661 /* AppDelegate.swift in Sources */,
+				00164E111FF537C1001F5661 /* LparStructure.swift in Sources */,
+				00164E131FF53E89001F5661 /* LparStaticVariables.swift in Sources */,
 				00164DFC1FF5372B001F5661 /* FirstViewController.swift in Sources */,
+				00164E161FF53F8A001F5661 /* HmcVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

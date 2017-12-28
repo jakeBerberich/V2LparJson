@@ -9,17 +9,43 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var chooseSort: UISegmentedControl!
+    
+    var sortOption:String = "default"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func chooseSortValue(_ sender: Any) {
+        
+        switch chooseSort.selectedSegmentIndex {
+        case 0:
+            sortOption = "lpar"
+        case 1:
+            sortOption = "hmc"
+        case 2:
+            sortOption = "application"
+        case 3:
+            sortOption = "environment"
+        case 4:
+            sortOption = "server"
+        default:
+            sortOption = "lpar"
+        }
+        
+        // print(sortOption)
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard     let lparSubfileVC = segue.destination as? LparSubfileVC else {return}
+        
+        lparSubfileVC.sortValue = sortOption
+        
+    }
+    
+    
 }
-
