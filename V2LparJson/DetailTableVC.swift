@@ -30,6 +30,9 @@ class DetailTableVC: UITableViewController {
     @IBOutlet weak var modelGroup: UILabel!
     @IBOutlet weak var os400: UILabel!
     @IBOutlet weak var storage: UILabel!
+    @IBOutlet weak var processorsCurrent: UILabel!
+    @IBOutlet weak var comments: UILabel!
+    @IBOutlet weak var audit: UILabel!
     
     
     override func viewDidLoad() {
@@ -49,6 +52,9 @@ class DetailTableVC: UITableViewController {
         modelGroup.text = ("P Group:  \(lparDetail.pGroup)")
         os400.text = lparDetail.os400
         storage.text = ("DASD:  \(lparDetail.mainStorage)  Memory:  \(lparDetail.auxStorage)")
+       comments.text = lparDetail.comments
+        audit.text = ("External: \(lparDetail.auditExternal)    Internal: \(lparDetail.auditInternal)")
+processorsCurrent.text = ("Processors:  \(lparDetail.processors)")
         
         
         
@@ -110,7 +116,7 @@ class DetailTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 9
         
         
         

@@ -1241,7 +1241,7 @@
    "SYSTEMASP": 2074738,
    "MAINSTORAGE": 12505152,
    "TOTALPARTITIONS": 16,
-   "APPLICATION": ".",
+   "APPLICATION": "Lawson",
    "ENVIRONMENT": "non-Prod",
    "AUDITEXTERNAL": "No",
    "AUDITSELF": "No",
@@ -1266,12 +1266,12 @@
    "SYSTEMASP": 1410466,
    "MAINSTORAGE": 8313856,
    "TOTALPARTITIONS": 12,
-   "APPLICATION": ".",
+   "APPLICATION": "EDI",
    "ENVIRONMENT": "non-Prod",
    "AUDITEXTERNAL": "No",
    "AUDITSELF": "No",
    "BUILDTIME": "2017-12-15-12.14.15.485000",
-   "COMMENTS": "Not Found *alltextd",
+   "COMMENTS": "Generation 2 Development",
    "PGROUP": " P10"
  },
  {

@@ -42,7 +42,6 @@ class serverVC: UITableViewController {
         
         // Configure the cell...
         
-        //   let serverEntity = self.serverList(indexPath.row)
         
         cell.textLabel?.text  = "\(serverArray[indexPath.row].server) :  \(serverArray[indexPath.row].ibmPowerClass)"
         cell.detailTextLabel?.text = " Data Center: \(serverArray[indexPath.row].dataCenter)     Side: \(serverArray[indexPath.row].dataCenterSide)   Rack: \(serverArray[indexPath.row].rackLocation)"
