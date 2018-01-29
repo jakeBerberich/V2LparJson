@@ -43,7 +43,7 @@ class serverVC: UITableViewController {
         // Configure the cell...
         
         
-        cell.textLabel?.text  = "\(serverArray[indexPath.row].server) :  \(serverArray[indexPath.row].ibmPowerClass)"
+        cell.textLabel?.text  = "\(serverArray[indexPath.row].server) :  \(serverArray[indexPath.row].ibmPowerClass)    SN: \(serverArray[indexPath.row].serialNum)"
         cell.detailTextLabel?.text = " Data Center: \(serverArray[indexPath.row].dataCenter)     Side: \(serverArray[indexPath.row].dataCenterSide)   Rack: \(serverArray[indexPath.row].rackLocation)"
         return cell
     }

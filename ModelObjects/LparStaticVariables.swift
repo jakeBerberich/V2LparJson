@@ -14,16 +14,17 @@ struct lparStatic {
     let rackLocation: String
     let dataCenter: String
     let ibmPowerClass: String
+    let serialNum: String
 }
 
-let bishop =  lparStatic(server: "Bishop", dataCenterSide: "A", rackLocation: "A3E4", dataCenter: "Greensboro", ibmPowerClass: "Power 8" )
-let chappie =  lparStatic(server: "Chappie", dataCenterSide: "A", rackLocation: "A3E5", dataCenter: "Greensboro", ibmPowerClass: "Power 8" )
-let gort =  lparStatic(server: "Gort", dataCenterSide: "B", rackLocation: "A3E5", dataCenter: "Greensboro", ibmPowerClass: "Power 8" )
-let sonny =  lparStatic(server: "Sonny", dataCenterSide: "B", rackLocation: "B3E3", dataCenter: "Greensboro", ibmPowerClass: "Power 6" )
-let fsm =  lparStatic(server: "FSM01", dataCenterSide: "A", rackLocation: "A1E1", dataCenter: "Greensboro", ibmPowerClass: "Blade" )
-let rosie =  lparStatic(server: "Rosie", dataCenterSide: "Central", rackLocation: "*TBD", dataCenter: "High Point", ibmPowerClass: "Power 6" )
-let bernie =  lparStatic(server: "Bernie", dataCenterSide: "Central", rackLocation: "*TBD", dataCenter: "High Point", ibmPowerClass: "Power 7" )
-let dcx =  lparStatic(server: "DCX", dataCenterSide: "Central", rackLocation: "*TBD", dataCenter: "Denver", ibmPowerClass: "Power 6" )
+let bishop =  lparStatic(server: "Bishop", dataCenterSide: "A", rackLocation: "A3E4", dataCenter: "Greensboro", ibmPowerClass: "Power 8", serialNum: "21-670BW")
+let chappie =  lparStatic(server: "Chappie", dataCenterSide: "A", rackLocation: "A3E5", dataCenter: "Greensboro", ibmPowerClass: "Power 8", serialNum: "21-C0AD7" )
+let gort =  lparStatic(server: "Gort", dataCenterSide: "B", rackLocation: "A3E5", dataCenter: "Greensboro", ibmPowerClass: "Power 8", serialNum: "10-8D540" )
+let sonny =  lparStatic(server: "Sonny", dataCenterSide: "B", rackLocation: "B3E3", dataCenter: "Greensboro", ibmPowerClass: "Power 6" , serialNum: "10-89D42")
+let fsm =  lparStatic(server: "FSM01", dataCenterSide: "A", rackLocation: "A1E1", dataCenter: "Greensboro", ibmPowerClass: "Blade" , serialNum: "06-B606B")
+let rosie =  lparStatic(server: "Rosie", dataCenterSide: "Central", rackLocation: "*TBD", dataCenter: "High Point", ibmPowerClass: "Power 6", serialNum: "06-B6C74" )
+let bernie =  lparStatic(server: "Bernie", dataCenterSide: "Central", rackLocation: "*TBD", dataCenter: "High Point", ibmPowerClass: "Power 7" , serialNum:  "10-6D815")
+let dcx =  lparStatic(server: "DCX", dataCenterSide: "Central", rackLocation: "*TBD", dataCenter: "Denver", ibmPowerClass: "Power 6" , serialNum: "OICU812")
 
 let serverFamilyArray = [bishop, chappie, gort, sonny, fsm, rosie, bernie, dcx]
 
